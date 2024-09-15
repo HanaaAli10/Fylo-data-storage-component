@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+body{
+    background: var(--VeryDarkBlue) url("images/bg-desktop.png") no-repeat;
+    background-size: cover;
+    background-position-y:50vh;
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+}
+@media (max-width:767px) {
+    body{
+        background-image: url("images/bg-mobile.png");
+        background-position: unset;
+        height: 100vh;
+    }
+}
+main{
+  
+    width: 760px;
+    height: 200px;
+    margin: 230px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:767px) {
+    main{
+        flex-direction: column;
+        width: 350px;
+        height: 400px;
+        margin: 150px auto;
+    }
+}
+main >div{
+    background-color: var(--DarkBlue);
+}
+main .LeftSide{
+    width: 35%;
+    height: 85%;
+    padding: 30px;
+    border-radius: 10px 100px 10px 10px ;
+    align-self: flex-end;
+}
+@media (max-width:767px) {
+    main .LeftSide{
+       width: 100%;
+       height: 45%;
+    }
+}
+main .LeftSide .logo{
+    margin-bottom: 20px;
+}
+main .LeftSide .images{
+   display: flex;
+   align-items: center;
+}
+main .LeftSide .images div{
+    background-color: var(--VeryDarkBlue);
+    padding: 10px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.RightSide{
+    width: 60%;
+    height: 65%;
+    align-self: flex-end;
+    border-radius: 10px;
+    padding: 30px;
+}
+@media (max-width:767px) {
+    main .RightSide{
+       width: 100%;
+       height: 45%;
+    }
+}
+.RightSide .storage{
+    color: var(--PaleBlue);
+    margin-bottom: 10px;
+}
+.RightSide .storage span{
+    font-weight: bold;
+    color: white;
+}
+.RightSide .Range{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background-color: var(--VeryDarkBlue);
+    border-radius: 10px;
+    padding: 2px;
+    
+}
+.RightSide .Range .SubRange{
+    position: absolute;
+    background-image: linear-gradient(to right, #ffa399, #ff9092, #ff7c8e, #ff668f, #ff4d94);
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    border: 2px solid var(--VeryDarkBlue);
+}
+.RightSide .Range .SubRange::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border-radius: 50%;
+}
+.RightSide .Range .top{
+    position: absolute;
+    background-color: white;
+    width: 130px;
+    height: 50px;
+    right: 0;
+    top: -80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--VeryDarkBlue);
+    font-size: 20px;
+}
+@media (max-width:767px) {
+    .RightSide .Range .top{
+        top: 95px;
+        right: 75px;
+    }
+}
+.RightSide .Range .top span{
+    color: var(--GrayishBlue);
+    font-size: 10px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+}
+.RightSide .Range .top::after{
+    content: "";
+    position: absolute;
+    border: 20px solid ;
+    border-color: transparent white transparent transparent;
+    right: 0px;
+    bottom: -20px;
+}
+@media (max-width:767px) {
+    .RightSide .Range .top::after{
+       display: none;
+    }
+}
+.RightSide .RangeValue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+.RightSide .RangeValue p{
+    color: var(--PaleBlue);
+    font-weight: bold;
+
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin: 1.6rem;
+    color: var(--GrayishBlue);
+    font-weight: bold;
+}
+
+.attribution a {
+    color: white;
+    font-weight: bold;
+}
