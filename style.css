@@ -92,6 +92,8 @@ main .LeftSide .images div{
 .RightSide .storage{
     color: var(--PaleBlue);
     margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 100;
 }
 .RightSide .storage span{
     font-weight: bold;
